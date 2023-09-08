@@ -1,0 +1,100 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+
+unmap `
+let mapleader = " "
+nnoremap ,e :edit ~/.ideavimrc<CR>
+nnoremap ,r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Do incremental searching.
+set ideamarks
+set ideajoin
+set idearefactormode=keep
+set scrolloff=10
+set relativenumber
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set highlightedyank
+set which-key
+set nerdtree
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/argtextobj.vim'
+let g:argtextobj_pairs="[:],(:),<:>"
+
+nmap <C-t> <Action>(ActivateTerminalToolWindow)
+nmap <C-f> <Action>($LRU)
+" Popup navigation
+"inoremap <C-j> <Action>(PopupMenu-selectNext)
+"inoremap <C-k> <Action>(PopupMenu-selectPrev)
+inoremap <C-k> :action ParameterInfo<CR>
+"inoremap <C-n> <Action>(PopupMenu-selectNext)
+"noremap <C-p> <Action>(PopupMenu-selectPrev)
+"map <C-n> <ESC>:action HippieCompletion<CR>a
+"map <C-p> <ESC>:action HippieBackwardCompletion<CR>a
+
+" Handled by Idea is better
+" nmap <C-h> <Action>(HideActiveWindow)
+
+
+" Open NERDTree (use q to exit)
+map <leader>e :NERDTree<CR>
+nmap <leader>d :action Vcs.ShowDiffChangedLines<CR>
+
+map <leader>q :action QuickActionsPopup<CR>
+" Comment lines
+map <leader>/ <action>(CommentByLineComment)
+map <leader><leader> <Action>(RecentFiles)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Go to code
+" why "gc" take slower in this case?
+map <leader>f :action GotoFile<CR>
+map <leader>c :action GotoClass<CR>
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+
+nnoremap \r :action ContextRun<CR>
+nnoremap \d :action ContextDebug<CR>
+nnoremap \b :action ToggleLineBreakpoint<CR>
+nnoremap \c :action RunClass<CR>
+nnoremap \f :action ChooseRunConfiguration<CR>
+nnoremap \t :action ActivateRunToolWindow<CR>
+nnoremap \u :action Rerun<CR>
+
+nnoremap ==  :action ReformatCode<CR>
+nnoremap =o :action OptimizeImports<CR>
