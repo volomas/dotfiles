@@ -10,8 +10,8 @@
 
 unmap `
 let mapleader = " "
-nnoremap ,e :edit ~/.ideavimrc<CR>
-nnoremap ,r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap <leader>,e :edit ~/.ideavimrc<CR>
+nnoremap <leader>,r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Do incremental searching.
 set ideamarks
@@ -30,6 +30,7 @@ set hlsearch
 set highlightedyank
 set which-key
 set nerdtree
+set quickscope
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
