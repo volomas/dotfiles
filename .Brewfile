@@ -1,3 +1,4 @@
+brew "curl"
 brew "kitty"
 brew "gpg"
 brew "nvim"
