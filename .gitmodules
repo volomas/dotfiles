@@ -1,0 +1,5 @@
+[submodule "/Users/vmas/bin"]
+	url = git@github.com:volomas/bin.git
+[submodule "bin"]
+	path = bin
+	url = git@github.com:volomas/bin.git
