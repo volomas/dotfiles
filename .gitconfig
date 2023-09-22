@@ -1,0 +1,18 @@
+[user]
+    name = Volodymyr Masliy
+    email = thebestvova@gmail.com
+
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig_include
+[pager]
+    branch = true
+[core]
+    editor = nvim
+[pull]
+    rebase = true
+[alias]
+    co = checkout
+    st = status
+    poh = push origin HEAD
+    br = brnach
+    fa = fetch --all
