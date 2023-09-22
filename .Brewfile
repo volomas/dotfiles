@@ -6,6 +6,7 @@ brew "tmux"
 brew "docker"
 brew "colima", args: ["HEAD"]
 brew "go"
+brew "fzf"
 
 cask "google-chrome"
 cask "brave-browser"

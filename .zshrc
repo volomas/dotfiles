@@ -100,15 +100,19 @@ source $HOME/work/.scripts
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+path+=($HOME/bin)
+path+=($HOME/.local/bin)
+
 alias vim='nvim'
 alias mnv='mvn-color'
+
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
+bindkey -s ^f "tmux-sessionizer.sh\n"
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 export TESTCONTAINERS_RYUK_DISABLED=true
-
-path+=($HOME/bin)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
