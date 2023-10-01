@@ -102,6 +102,7 @@ source $HOME/work/.scripts
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 path+=($HOME/bin)
 path+=($HOME/.local/bin)
+path+=($HOME/go/bin)
 
 alias vim='nvim'
 alias mnv='mvn-color'
