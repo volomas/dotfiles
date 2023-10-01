@@ -21,12 +21,6 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
-
     use { 'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
 
     use({
@@ -53,10 +47,14 @@ return require('packer').startup(function(use)
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
-
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
+        branch = 'v3.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
@@ -92,7 +90,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -100,4 +98,13 @@ return require('packer').startup(function(use)
     use("tpope/vim-dadbod")
     use("kristijanhusak/vim-dadbod-ui")
     use("kristijanhusak/vim-dadbod-completion")
+    use({
+        "epwalsh/obsidian.nvim",
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+
+            -- see below for full list of optional dependencies 👇
+        }
+    })
 end)
