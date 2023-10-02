@@ -16,3 +16,4 @@
     poh = push origin HEAD
     br = brnach
     fa = fetch --all
+    dfs = diff --staged

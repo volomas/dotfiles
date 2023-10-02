@@ -7,6 +7,7 @@ brew "docker"
 brew "colima", args: ["HEAD"]
 brew "go"
 brew "fzf"
+brew "ripgrep"
 
 cask "google-chrome"
 cask "brave-browser"
