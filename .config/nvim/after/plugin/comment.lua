@@ -8,5 +8,5 @@ require('Comment').setup({
 
 local api = require('Comment.api')
 
-vim.keymap.set("n", "<C-/>", api.toggle.linewise.current)
-vim.keymap.set("x", "<C-/>", '<Plug>(comment_toggle_linewise_visual)')
+vim.keymap.set("n", "<C-_>", api.toggle.linewise.current)
+vim.keymap.set("x", "<C-_>", '<Plug>(comment_toggle_linewise_visual)')
