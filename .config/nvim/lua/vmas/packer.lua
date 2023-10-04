@@ -21,7 +21,14 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 
-    use { 'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+    use { 'morhetz/gruvbox' }
+    use { 'EdenEast/nightfox.nvim', config = function() vim.cmd.colorscheme("nightfox") end }
+    use 'nvim-tree/nvim-web-devicons'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
 
     use({
         "folke/trouble.nvim",
