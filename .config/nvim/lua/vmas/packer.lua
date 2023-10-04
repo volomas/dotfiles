@@ -29,6 +29,10 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    use({
+        "aserowy/tmux.nvim"
+    })
+
 
     use({
         "folke/trouble.nvim",
