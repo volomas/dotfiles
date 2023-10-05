@@ -1,4 +1,4 @@
-vim.opt.clipboard='unnamedplus'
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 vim.opt.guicursor = ""
 
 vim.opt.nu = true

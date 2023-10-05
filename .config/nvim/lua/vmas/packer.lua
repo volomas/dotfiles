@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
         "aserowy/tmux.nvim"
     })
 
-
     use({
         "folke/trouble.nvim",
         config = function()
