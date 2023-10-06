@@ -77,7 +77,8 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 " why "gc" take slower in this case?
-map <leader>f :action GotoFile<CR>
+map <leader>ff :action GotoFile<CR>
+map <leader>fg :action TextSearchAction<CR>
 map <leader>c :action GotoClass<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
