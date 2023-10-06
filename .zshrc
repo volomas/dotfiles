@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn gradle aws brew docker zsh-history-substring-search z)
+plugins=(git mvn gradle aws brew docker zsh-history-substring-search z terraform)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/work/.scripts
@@ -113,6 +113,9 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 export TESTCONTAINERS_RYUK_DISABLED=true
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
