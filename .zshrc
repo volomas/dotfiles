@@ -65,12 +65,26 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+zstyle ':omz:plugins:nvm' lazy yes
+#
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf mvn gradle aws brew docker zsh-history-substring-search z terraform)
+plugins=(
+    git
+    fzf
+    mvn
+    gradle
+    aws
+    brew
+    docker
+    zsh-history-substring-search
+    z
+    terraform
+    nvm
+)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/work/.scripts
@@ -103,6 +117,8 @@ source $HOME/work/.scripts
 path+=($HOME/bin)
 path+=($HOME/.local/bin)
 path+=($HOME/go/bin)
+path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
+
 
 alias vim='nvim'
 alias mnv='mvn-color'
@@ -121,7 +137,3 @@ export TESTCONTAINERS_RYUK_DISABLED=true
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
