@@ -60,12 +60,13 @@ inoremap <C-k> :action ParameterInfo<CR>
 
 " Open NERDTree (use q to exit)
 map <leader>e :NERDTree<CR>
-nmap <leader>d :action Vcs.ShowDiffChangedLines<CR>
+nmap <leader>vd <Action>(Vcs.ShowDiffChangedLines)<CR>
+nmap <leader>vr <Action>(Vcs.RollbackChangedLines)<CR>
 
-map <leader>q :action QuickActionsPopup<CR>
+map <leader>q <Action>(QuickActionsPopup)<CR>
 " Comment lines
-map <leader>/ <action>(CommentByLineComment)
-map <leader><leader> <Action>(RecentFiles)
+map <leader>/ <Action>(CommentByLineComment)
+map <leader><leader> <Action>(Switcher)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
@@ -77,9 +78,9 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 " why "gc" take slower in this case?
-map <leader>ff :action GotoFile<CR>
-map <leader>fg :action TextSearchAction<CR>
-map <leader>c :action GotoClass<CR>
+map <leader>ff <Action>(GotoFile)<CR>
+map <leader>fg <Action>(TextSearchAction)<CR>
+map <leader>c <Action>(GotoClass)<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
