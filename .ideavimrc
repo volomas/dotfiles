@@ -91,13 +91,13 @@ nmap <leader>gb <Action>(Forward)
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
-nnoremap \r :action ContextRun<CR>
-nnoremap \d :action ContextDebug<CR>
+nnoremap \r :action RunClass<CR>
+nnoremap \d :action DebugClass<CR>
+nnoremap \u :action Rerun<CR>
 nnoremap \b :action ToggleLineBreakpoint<CR>
-nnoremap \c :action RunClass<CR>
+
 nnoremap \f :action ChooseRunConfiguration<CR>
 nnoremap \t :action ActivateRunToolWindow<CR>
-nnoremap \u :action Rerun<CR>
 
 nnoremap ==  :action ReformatCode<CR>
 nnoremap =o :action OptimizeImports<CR>
