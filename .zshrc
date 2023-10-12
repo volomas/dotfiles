@@ -121,7 +121,8 @@ path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
 
 
 alias vim='nvim'
-alias mnv='mvn-color'
+alias mvn='mvn-color'
+alias cls='clear'
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
