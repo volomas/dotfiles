@@ -123,6 +123,7 @@ path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
 alias vim='nvim'
 alias mvn='mvn-color'
 alias cls='clear'
+alias lg='lazygit'
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
@@ -132,9 +133,12 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+export XDG_CONFIG_HOME="$HOME/.config"
 
 export TESTCONTAINERS_RYUK_DISABLED=true
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
