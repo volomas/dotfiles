@@ -22,7 +22,10 @@ return require('packer').startup(function(use)
     end
 
     use { 'morhetz/gruvbox' }
-    use { 'EdenEast/nightfox.nvim', config = function() vim.cmd.colorscheme("nightfox") end }
+    use { 'EdenEast/nightfox.nvim' }
+    use "rebelot/kanagawa.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "folke/tokyonight.nvim" }
     use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
@@ -92,6 +95,7 @@ return require('packer').startup(function(use)
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
     use("ianding1/leetcode.vim")
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                            , branch = '0.1.x',

@@ -27,3 +27,11 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>mir", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+vim.keymap.set("n", "<leader>e", "<cmd>Lexplore<CR>")
+
+-- Freed <C-l> in Netrw
+-- https://github.com/christoomey/vim-tmux-navigator/issues/189
+-- When in netrw, c-l is refreshing the file tree, but c-l is bind in neovim to move to the left pane
+-- The trick here is bind it some rnadom combo
+vim.keymap.set("n", "<leader><leader><leader><leader><leader><leader>l", "<Plug>NetrwRefresh")
