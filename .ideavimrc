@@ -19,6 +19,7 @@ set ideajoin
 set idearefactormode=keep
 set scrolloff=10
 set relativenumber
+set number
 set showmode
 set showcmd
 set visualbell
