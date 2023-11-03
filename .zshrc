@@ -78,6 +78,7 @@ plugins=(
     mvn
     gradle
     aws
+    azure
     brew
     docker
     zsh-history-substring-search
@@ -119,7 +120,6 @@ path+=($HOME/bin)
 path+=($HOME/.local/bin)
 path+=($HOME/go/bin)
 path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
-
 
 alias vim='nvim'
 alias v='nvim'
