@@ -35,3 +35,4 @@ vim.keymap.set("n", "<leader>e", "<cmd>Lexplore<CR>")
 -- When in netrw, c-l is refreshing the file tree, but c-l is bind in neovim to move to the left pane
 -- The trick here is bind it some rnadom combo
 vim.keymap.set("n", "<leader><leader><leader><leader><leader><leader>l", "<Plug>NetrwRefresh")
+vim.keymap.set("n", "\\\\", ":noh<CR>", { noremap = true })
