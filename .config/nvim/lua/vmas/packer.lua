@@ -117,4 +117,5 @@ return require('packer').startup(function(use)
     use {
         'numToStr/Comment.nvim'
     }
+    use("diepm/vim-rest-console")
 end)
