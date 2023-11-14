@@ -21,11 +21,15 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 
-    use { 'morhetz/gruvbox' }
-    use { 'EdenEast/nightfox.nvim' }
-    use "rebelot/kanagawa.nvim"
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use { "folke/tokyonight.nvim" }
+    -- themes
+    -- use { 'morhetz/gruvbox' }
+    -- use { 'EdenEast/nightfox.nvim' }
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    -- use { "folke/tokyonight.nvim" }
+    -- use "rebelot/kanagawa.nvim"
+    use { "doums/darcula" }
+    -- use 'Mofiqul/dracula.nvim'
+
     use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
@@ -92,6 +96,14 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp",
+        dependencies = { "rafamadriz/friendly-snippets" }
+    })
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
     use("ianding1/leetcode.vim")

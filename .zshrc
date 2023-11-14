@@ -84,6 +84,7 @@ plugins=(
     z
     terraform
     nvm
+    zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,8 +138,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export TESTCONTAINERS_RYUK_DISABLED=true
 
+eval "$(zoxide init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
