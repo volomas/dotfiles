@@ -3,7 +3,3 @@
 [submodule "bin"]
 	path = bin
 	url = git@github.com:volomas/bin.git
-[submodule "/Users/vmas/.config/nvim"]
-	path = /Users/vmas/.config/nvim
-	url = git@github.com:volomas/nvim.git
-	branch = master
