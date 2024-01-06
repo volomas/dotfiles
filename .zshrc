@@ -122,6 +122,7 @@ path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
 
 
 alias vim='nvim'
+alias v='nvim'
 alias mvn='mvn-color'
 alias cls='clear'
 alias lg='lazygit'

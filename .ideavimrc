@@ -3,6 +3,9 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
+" Converts string date into bson extended format:
+" "2022-03-03T11:04:00.047Z" --> {"$date": "2022-03-03T11:04:00.047Z"}
+let @d = "0f\";;da\"i{\"$date\":<ESC>p"
 
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
@@ -81,11 +84,14 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 " Go to code
 " why "gc" take slower in this case?
 map <leader>ff <Action>(GotoFile)<CR>
+map <leader>sf <Action>(GotoFile)<CR>
 map <leader>fg <Action>(TextSearchAction)<CR>
+map <leader>ds <Action>(FileStructurePopup)
 map <leader>c <Action>(GotoClass)<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gr <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
