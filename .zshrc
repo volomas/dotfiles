@@ -86,6 +86,7 @@ plugins=(
     terraform
     nvm
     zoxide
+    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh

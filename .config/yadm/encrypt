@@ -1,1 +1,4 @@
 .ssh/*
+~/work/.scripts
+~/work/.gitconfig_include
+~/work/etc
