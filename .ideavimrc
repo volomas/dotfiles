@@ -50,6 +50,8 @@ let g:argtextobj_pairs="[:],(:),<:>"
 
 nmap <C-t> <Action>(ActivateTerminalToolWindow)
 nmap <C-f> <Action>($LRU)
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
 " Popup navigation
 "inoremap <C-j> <Action>(PopupMenu-selectNext)
 "inoremap <C-k> <Action>(PopupMenu-selectPrev)
@@ -91,7 +93,7 @@ map <leader>c <Action>(GotoClass)<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
-nmap <leader>gr <Action>(ShowUsages)
+nmap gr <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
