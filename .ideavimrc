@@ -74,6 +74,8 @@ map <leader>q <Action>(QuickActionsPopup)<CR>
 " Comment lines
 map <leader>/ <Action>(CommentByLineComment)
 map <leader><leader> <Action>(Switcher)
+" Like buffers in vim
+map <leader>b <Action>(Switcher)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
@@ -85,9 +87,10 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 " why "gc" take slower in this case?
-map <leader>ff <Action>(GotoFile)<CR>
+map <leader>f <Action>(GotoFile)<CR>
 map <leader>sf <Action>(GotoFile)<CR>
-map <leader>fg <Action>(TextSearchAction)<CR>
+" map <leader>fg <Action>(TextSearchAction)<CR>
+map <leader>g <Action>(TextSearchAction)<CR>
 map <leader>ds <Action>(FileStructurePopup)
 map <leader>c <Action>(GotoClass)<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
