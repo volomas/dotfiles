@@ -13,11 +13,12 @@ let @d = "0f\";;da\"i{\"$date\":<ESC>p"
 
 unmap `
 let mapleader = " "
-nnoremap <leader>,e :edit ~/.ideavimrc<CR>
+noremap <leader>,e :edit ~/.ideavimrc<CR>
 nnoremap <leader>,r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Do incremental searching.
 set ideamarks
+set matchit
 set ideajoin
 set idearefactormode=keep
 set scrolloff=10
@@ -90,7 +91,7 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>f <Action>(GotoFile)<CR>
 map <leader>sf <Action>(GotoFile)<CR>
 " map <leader>fg <Action>(TextSearchAction)<CR>
-map <leader>g <Action>(TextSearchAction)<CR>
+map <leader>sg <Action>(TextSearchAction)<CR>
 map <leader>ds <Action>(FileStructurePopup)
 map <leader>c <Action>(GotoClass)<CR>
 nmap <leader>gy <Action>(GotoTypeDeclaration)
