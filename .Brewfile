@@ -11,6 +11,7 @@ brew "lazygit"
 brew "ripgrep"
 brew "jq"
 brew "ripgrep"
+brew "wget"
 
 cask "google-chrome"
 cask "brave-browser"
