@@ -66,6 +66,8 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 zstyle ':omz:plugins:nvm' lazy yes
+# to show fzf-tab completion in floating tmux window
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 #
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -141,7 +143,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export TESTCONTAINERS_RYUK_DISABLED=true
 
 eval "$(zoxide init zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+enable-fzf-tab
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
