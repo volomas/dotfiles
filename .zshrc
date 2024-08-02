@@ -67,7 +67,15 @@ ZSH_THEME="robbyrussell"
 
 zstyle ':omz:plugins:nvm' lazy yes
 # to show fzf-tab completion in floating tmux window
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+
+jwtd() {
+    if [[ -x $(command -v jq) ]]; then
+         jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "${1}"
+         echo "Signature: $(echo "${1}" | awk -F'.' '{print $3}')"
+    fi
+}
+
 #
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
