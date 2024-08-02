@@ -137,6 +137,7 @@ alias v='nvim'
 alias mvn='mvn-color'
 alias cls='clear'
 alias lg='lazygit'
+alias cat='bat'
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
