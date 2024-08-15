@@ -19,10 +19,10 @@ brew "bat"
 # shorter, tldr style alternative to manpages
 brew "tlrc"
 
+# tilling window manager like i3
+cask "nikitabobko/tap/aerospace"
 cask "google-chrome"
 cask "brave-browser"
-# for window management
-cask "amethyst"
 # for smooth scrolling
 cask "mos"
 cask "raycast"
