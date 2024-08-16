@@ -149,7 +149,7 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export TESTCONTAINERS_RYUK_DISABLED=true
+export TESTCONTAINERS_RYUK_DISABLED=false
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
