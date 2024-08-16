@@ -60,6 +60,8 @@ outer.right =      0
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
 [mode.main.binding]
+cmd-h = [] # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -185,6 +187,12 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace 3'
 
+# TODO also doesn't work
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser.app.dagcebhamppkdobhdanmheoegaobkccp'
+# if.app-name-regex-substring = 'Snowflake'
+run = 'move-node-to-workspace 4'
+
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 check-further-callbacks = true
@@ -197,6 +205,10 @@ run = 'move-node-to-workspace 0'
 [[on-window-detected]]
 if.app-name-regex-substring = 'SoundCloud'
 run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace 9'
 
 # TODO for some reason doesn't work
 [[on-window-detected]]
