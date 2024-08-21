@@ -99,6 +99,7 @@ plugins=(
     fzf-tab
 )
 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 source $ZSH/oh-my-zsh.sh
 source $HOME/work/.scripts
 
