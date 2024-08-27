@@ -97,6 +97,7 @@ plugins=(
     nvm
     zoxide
     fzf-tab
+    dotenv
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
