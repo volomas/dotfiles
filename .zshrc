@@ -12,7 +12,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # default theme
 # ZSH_THEME="robbyrussell"
 # minimalistic theme with git status on right side
-ZSH_THEME="nicoulaj"
+# ZSH_THEME="nicoulaj"
+# ZSH_THEME="peepcode"
+# ZSH_THEME="refined"
+ZSH_THEME="avit"
+
 # with prompt on the new line
 # ZSH_THEME="gnzh"
 
