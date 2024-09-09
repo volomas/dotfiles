@@ -28,7 +28,8 @@ set showmode
 set showcmd
 set visualbell
 set clipboard+=unnamed
-set ignorecase
+set surround
+se  ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -101,6 +102,10 @@ nmap gr <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
 
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
