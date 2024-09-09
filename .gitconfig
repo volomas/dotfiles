@@ -19,3 +19,5 @@
     dfs = diff --staged
     df = diff
     sw = switch
+[log]
+	date = local
