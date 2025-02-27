@@ -1,4 +1,4 @@
 .ssh/*
-/Users/volodymyr.masliy/work/.scripts
-/Users/volodymyr.masliy/work/.gitconfig_include
-/Users/volodymyr.masliy/work/etc
+$HOME/work/.scripts
+$HOME/work/.gitconfig_include
+$HOME/work/etc
