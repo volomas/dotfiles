@@ -21,6 +21,7 @@ brew "tlrc"
 
 # tilling window manager like i3
 cask "nikitabobko/tap/aerospace"
+cast "font-jetbrains-mono-nerd-font"
 cask "google-chrome"
 cask "brave-browser"
 # for smooth scrolling
