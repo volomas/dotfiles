@@ -110,6 +110,7 @@ vnoremap > >gv
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
+xnoremap \r :action Console.Jdbc.Execute<CR>
 nnoremap \r :action RunClass<CR>
 nnoremap \d :action DebugClass<CR>
 nnoremap \u :action Rerun<CR>

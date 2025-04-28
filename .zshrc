@@ -145,6 +145,7 @@ path+=($HOME/bin)
 path+=($HOME/.local/bin)
 path+=($HOME/go/bin)
 path+=(/Applications/IntelliJ\ IDEA.app/Contents/MacOS)
+path+=(/usr/local/sessionmanagerplugin/bin)
 
 alias vim='nvim'
 alias v='nvim'
