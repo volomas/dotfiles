@@ -156,7 +156,7 @@ alias cat='bat'
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
-bindkey -s ^f "tmux-sessionizer.sh\n"
+bindkey -s ^f "tmux-sessionizer\n"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
