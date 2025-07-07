@@ -1,0 +1,9 @@
+.config/jgit
+.config/nvim
+.config/nvm
+.config/qBittorrent
+.local
+.config/github-copilot
+.config/colima/ssh_config
+.config/colima/default
+.config/colima/_lima
