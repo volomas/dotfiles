@@ -21,7 +21,6 @@ set ideamarks
 set matchit
 set ideajoin
 set idearefactormode=keep
-set scrolloff=10
 set relativenumber
 set number
 set showmode
@@ -110,7 +109,7 @@ vnoremap > >gv
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
-xnoremap \r :action Console.Jdbc.Execute<CR>
+nnoremap \x :action Console.Jdbc.Execute<CR>
 nnoremap \r :action RunClass<CR>
 nnoremap \d :action DebugClass<CR>
 nnoremap \u :action Rerun<CR>
@@ -121,3 +120,23 @@ nnoremap \t :action ActivateRunToolWindow<CR>
 
 nnoremap ==  :action ReformatCode<CR>
 nnoremap =o :action OptimizeImports<CR>
+" Half-page scrolls keep the cursor centered
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" File jumps also recenter
+nnoremap gg ggzz
+nnoremap G Gzz
+
+#Half-page scrolls keep the cursor centered
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" File jumps also recenter
+nnoremap gg ggzz
+nnoremap G Gzz
+
+" Keep some breathing room near edges
+set scrolloff=5
+set nostartofline
+set nostartofline
