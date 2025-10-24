@@ -117,6 +117,10 @@ plugins=(
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if [ -f "$HOME/.secrets.zsh" ]; then
+  source "$HOME/.secrets.zsh"
+fi
+[ -f ~/work/.zshrc.work ] && source ~/work/.zshrc.work
 source $ZSH/oh-my-zsh.sh
 source $HOME/work/.scripts
 
