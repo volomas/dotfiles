@@ -28,7 +28,7 @@ set showcmd
 set visualbell
 set clipboard+=unnamed
 set surround
-se  ignorecase
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -140,3 +140,7 @@ nnoremap G Gzz
 set scrolloff=5
 set nostartofline
 set nostartofline
+
+" Copilot/AI stuff
+nnoremap <leader>aa :action copilot.chat.inline<CR>
+vnoremap <leader>aa :action copilot.chat.inline<CR>
