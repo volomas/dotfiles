@@ -132,6 +132,10 @@ nnoremap G Gzz
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
+" visual/select mode
+vnoremap <C-d> <C-d>zz
+vnoremap <C-u> <C-u>zz
+
 " File jumps also recenter
 nnoremap gg ggzz
 nnoremap G Gzz
