@@ -101,7 +101,7 @@ jwtd() {
 plugins=(
     git
     fzf
-    mvn
+    # mvn
     gradle
     aws
     azure
@@ -114,6 +114,7 @@ plugins=(
     zoxide
     fzf-tab
     dotenv
+    docker-compose
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -157,7 +158,7 @@ path+=(/usr/local/sessionmanagerplugin/bin)
 
 alias vim='nvim'
 alias v='nvim'
-alias mvn='mvn-color'
+# alias mvn='mvn-color'
 alias cls='clear'
 alias lg='lazygit'
 alias cat='bat'
@@ -165,7 +166,6 @@ alias ll='ls -la'
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
-bindkey -s ^f "tmux-sessionizer\n"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -186,6 +186,3 @@ enable-fzf-tab
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-eval "$(~/.local/bin/mise activate)"
