@@ -36,6 +36,8 @@ set highlightedyank
 set which-key
 set nerdtree
 set quickscope
+set inccommand=nosplit
+set mouse=a
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 nnoremap \\ :noh<CR>
@@ -46,32 +48,32 @@ nnoremap \\ :noh<CR>
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
-Plug 'vim-scripts/argtextobj.vim'
-let g:argtextobj_pairs="[:],(:),<:>"
+Plug 'wellle/targets.vim'
+set functextobj
+set classtextobj
+let g:camelcasemotion_key = '<leader>'
+Plug 'bkad/CamelCaseMotion'
+Plug 'tpope/vim-abolish'
+set youcompleteme
+set ReplaceWithRegister
+set VimEverywhere
 
 nmap <C-t> <Action>(ActivateTerminalToolWindow)
 nmap <C-f> <Action>($LRU)
 nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
-" Popup navigation
-"inoremap <C-j> <Action>(PopupMenu-selectNext)
-"inoremap <C-k> <Action>(PopupMenu-selectPrev)
 inoremap <C-k> :action ParameterInfo<CR>
-"inoremap <C-n> <Action>(PopupMenu-selectNext)
-"noremap <C-p> <Action>(PopupMenu-selectPrev)
-"map <C-n> <ESC>:action HippieCompletion<CR>a
-"map <C-p> <ESC>:action HippieBackwardCompletion<CR>a
 
 " Handled by Idea is better
 " nmap <C-h> <Action>(HideActiveWindow)
 
 
 " Open NERDTree (use q to exit)
-map <leader>e :NERDTree<CR>
-nmap <leader>vd <Action>(Vcs.ShowDiffChangedLines)<CR>
-nmap <leader>vr <Action>(Vcs.RollbackChangedLines)<CR>
+map <leader>n :NERDTree<CR>
+nmap <leader>vd <Action>(Vcs.ShowDiffChangedLines)
+nmap <leader>vr <Action>(Vcs.RollbackChangedLines)
 
-map <leader>q <Action>(QuickActionsPopup)<CR>
+map <leader>q <Action>(QuickActionsPopup)
 " Comment lines
 map <leader>/ <Action>(CommentByLineComment)
 map <leader><leader> <Action>(Switcher)
@@ -88,16 +90,15 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 " why "gc" take slower in this case?
-map <leader>f <Action>(GotoFile)<CR>
-map <leader>sf <Action>(GotoFile)<CR>
+map <leader>f <Action>(GotoFile)
+map <leader>sf <Action>(GotoFile)
 " map <leader>fg <Action>(TextSearchAction)<CR>
-map <leader>sg <Action>(TextSearchAction)<CR>
+map <leader>sg <Action>(TextSearchAction)
 map <leader>ds <Action>(FileStructurePopup)
-map <leader>c <Action>(GotoClass)<CR>
+map <leader>c <Action>(GotoClass)
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
-nmap gr <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
@@ -128,21 +129,12 @@ nnoremap <C-u> <C-u>zz
 nnoremap gg ggzz
 nnoremap G Gzz
 
-#Half-page scrolls keep the cursor centered
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
-
 " visual/select mode
 vnoremap <C-d> <C-d>zz
 vnoremap <C-u> <C-u>zz
 
-" File jumps also recenter
-nnoremap gg ggzz
-nnoremap G Gzz
-
 " Keep some breathing room near edges
 set scrolloff=5
-set nostartofline
 set nostartofline
 
 " Copilot/AI stuff
