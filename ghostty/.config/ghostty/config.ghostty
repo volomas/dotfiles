@@ -1,0 +1,29 @@
+# Ghostty config mirroring kitty (theme, fonts, behavior)
+# Docs: https://ghostty.org/docs/config
+
+# Kanagawa Wave (bundled; same palette as kitty themes/kanagawa.conf)
+theme = Kanagawa Wave
+
+# kitty: font_family JetBrainsMono Nerd Font Mono, bold = Extra Bold
+font-family = JetBrainsMono Nerd Font Mono
+# named styles within the family (kitty bold_font = "... Extra Bold")
+font-style-bold = ExtraBold
+font-style-bold-italic = ExtraBold Italic
+# kitty: font_size 15.0
+font-size = 14
+# kitty: disable_ligatures always
+font-feature = -calt
+font-thicken = true
+font-thicken-strength = 100
+font-feature = +zero
+
+# kitty: background_opacity 0.99
+background-opacity = 0.99
+# kitty: hide_window_decorations titlebar-only
+macos-titlebar-style = hidden
+# kitty: macos_option_as_alt yes
+macos-option-as-alt = true
+# kitty: macos_quit_when_last_window_closed yes
+quit-after-last-window-closed = true
+# kitty: copy_on_select no (Ghostty default is true)
+copy-on-select = false

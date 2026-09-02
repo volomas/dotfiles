@@ -14,12 +14,26 @@
     diffFilter = delta --color-only
 
 [delta]
-    navigate = true  # use n and N to move between diff sections
-    dark = true      # or light = true, or omit for auto-detection
+    navigate = true
+    light = false
     side-by-side = true
+    line-numbers = true
+    syntax-theme = Dracula
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-style = file line-number syntax 
+	features = platypus
 
 [merge]
-    conflictStyle = zdiff3
+    tool = nvimdiff
+    conflictstyle = zdiff3
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[diff]
+    tool = nvimdiff
+    colorMoved = default
 
 [pull]
     rebase = true
@@ -32,5 +46,7 @@
     dfs = diff --staged
     df = diff
     sw = switch
-[log]
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	date = local
+[include]
+	path = ~/delta-themes.gitconfig

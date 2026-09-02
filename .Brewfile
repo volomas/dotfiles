@@ -1,5 +1,6 @@
 brew "curl"
 brew "kitty"
+cask "ghostty"
 brew "gpg"
 brew "nvim"
 brew "tmux"
