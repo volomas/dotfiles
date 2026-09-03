@@ -21,8 +21,8 @@ font-feature = +zero
 scrollback-limit = 100000000
 
 # kitty: background_opacity 0.99
-background-opacity = 0.95
-background-blur = 10
+background-opacity = 0.99
+# background-blur = 10
 # kitty: hide_window_decorations titlebar-only
 macos-titlebar-style = hidden
 # kitty: macos_option_as_alt yes
