@@ -2,7 +2,7 @@
 .config/nvim
 .config/nvm
 .config/qBittorrent
-.local
+/.local
 .config/github-copilot
 .config/colima/ssh_config
 .config/colima/default

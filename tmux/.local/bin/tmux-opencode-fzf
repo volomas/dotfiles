@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+# Fuzzy-find live opencode tmux panes and switch to them.
+# Lists only panes where opencode is actually running (pane title "OC | <title>",
+# "OpenCode", or pane command opencode), showing tmux session, folder and title.
+
+set -euo pipefail
+
+notify() {
+	if [[ -n "${TMUX:-}" ]]; then
+		tmux display-message "opencode-fzf: $1"
+	else
+		echo "opencode-fzf: $1" >&2
+	fi
+}
+
+command -v fzf >/dev/null 2>&1 || { notify "fzf not found"; exit 1; }
+command -v tmux >/dev/null 2>&1 || { echo "tmux not found" >&2; exit 1; }
+
+# tmux session<TAB>pane_id<TAB>folder<TAB>title
+# Only panes with a live opencode process count; stale pane titles are ignored.
+rows() {
+	local tab=$'\t'
+	tmux list-panes -a -F "#{session_name}${tab}#{pane_id}${tab}#{pane_current_path}${tab}#{pane_title}${tab}#{pane_current_command}" 2>/dev/null |
+	while IFS=$'\t' read -r sname pid ppath ptitle pcmd; do
+		[[ "$pcmd" == opencode* ]] || continue
+		title="-"
+		[[ "$ptitle" == "OC | "* ]] && title="${ptitle#OC | }"
+		folder="${ppath##*/}"
+		[[ -z "$folder" ]] && folder="/"
+		printf '%s\t%s\t%s\t%s\n' "$sname" "$folder" "$title" "$pid"
+	done
+}
+
+picker() {
+	local tab=$'\t'
+	rows | fzf --reverse \
+		--with-nth=1..3 \
+		--delimiter="$tab" \
+		--no-sort \
+		--border --border-label ' opencode sessions ' \
+		--prompt '⚡  ' \
+		--header '  enter switch  esc cancel' \
+		--bind 'tab:down,btab:up' \
+		--info=inline-right
+}
+
+picked="$(picker)" || exit 0
+
+# fzf output: "display...\t<pane_id>"
+pane_id="$(printf '%s' "$picked" | awk -F'\t' '{print $NF}')"
+
+if [[ -z "$pane_id" ]]; then
+	notify "invalid selection"
+	exit 1
+fi
+
+if [[ -n "${TMUX:-}" ]]; then
+	tmux switch-client -t "$pane_id"
+else
+	notify "not inside tmux, cannot switch"
+	exit 1
+fi
