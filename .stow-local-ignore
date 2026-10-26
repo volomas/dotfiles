@@ -1,0 +1,6 @@
+# Files in the stow directory that should never be linked into the target,
+# regardless of which package (or the whole directory) is stowed.
+.local
+.Brewfile
+install.sh
+.gitignore
