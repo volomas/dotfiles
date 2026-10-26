@@ -2,8 +2,9 @@
     name = Volodymyr Masliy
     email = thebestvova@gmail.com
 
-[includeIf "gitdir:~/work/"]
-    path = ~/work/.gitconfig_include
+# machine-specific git config (per-laptop): see ~/.gitconfig.local
+[include]
+    path = ~/.gitconfig.local
 [pager]
     branch = true
 [core]

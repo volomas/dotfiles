@@ -117,7 +117,7 @@ plugins=(
     docker-compose
 )
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$(brew --prefix)/share/zsh/site-functions:$HOME/.zsh/completions:${FPATH}"
 if [ -f "$HOME/.secrets.zsh" ]; then
   source "$HOME/.secrets.zsh"
 fi
@@ -186,3 +186,6 @@ enable-fzf-tab
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# machine-specific zsh config (per-laptop): see ~/.zshrc.local
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"

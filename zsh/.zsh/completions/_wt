@@ -1,0 +1,26 @@
+#compdef wt
+
+_wt() {
+    local repo="$HOME/dlr/gom_be"
+    local -a wts branches
+    local -aU branch_names
+    local p
+
+    branch_names=(
+        ${(f)"$(command git -C "$repo" for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"}
+        ${(f)"$(command git -C "$repo" for-each-ref --format='%(refname:lstrip=3)' refs/remotes/origin 2>/dev/null)"}
+    )
+    branches=("$branch_names[@]")
+
+    if (( CURRENT == 2 )); then
+        for p in ${(f)"$(command git -C "$repo" worktree list --porcelain 2>/dev/null | command awk '$1=="worktree"{print $2}')"}; do
+            [[ -d "$p" && "${p:t}" != ".bare" ]] && wts+=("${p:t}")
+        done
+        _describe -t worktrees 'existing worktree' wts
+        _describe -t branches 'branch' branches
+    elif (( CURRENT == 3 )); then
+        _describe -t branches 'base branch' branches
+    fi
+}
+
+_wt "$@"
