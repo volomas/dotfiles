@@ -36,3 +36,4 @@ copy-on-select = false
 keybind = global:cmd+shift+enter=toggle_quick_terminal
 quick-terminal-position = bottom
 
+window-decoration = none
