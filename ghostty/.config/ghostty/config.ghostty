@@ -15,7 +15,7 @@ font-size = 14.0
 # kitty: disable_ligatures always
 font-feature = -calt
 font-thicken = true
-font-thicken-strength = 100
+font-thicken-strength = 10
 font-feature = +zero
 
 scrollback-limit = 100000000
