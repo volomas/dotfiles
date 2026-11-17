@@ -15,7 +15,7 @@ font-family = JetBrainsMono Nerd Font Mono
 font-style-bold = ExtraBold
 font-style-bold-italic = ExtraBold Italic
 # kitty: font_size 15.0
-font-size = 14.0
+font-size = 15.0
 # kitty: disable_ligatures always
 font-feature = -calt
 font-thicken = true
