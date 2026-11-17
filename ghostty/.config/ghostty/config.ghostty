@@ -6,6 +6,9 @@ theme = Kanagawa Wave
 # theme = Dracula
 
 # kitty: font_family JetBrainsMono Nerd Font Mono, bold = Extra Bold
+# Iosevka Term primary; JetBrains Nerd Font kept as fallback for Nerd icon glyphs
+font-family = ""
+font-family = Iosevka Term
 font-family = JetBrainsMono Nerd Font Mono
 # named styles within the family (kitty bold_font = "... Extra Bold")
 font-style-bold = ExtraBold
@@ -17,6 +20,10 @@ font-feature = -calt
 font-thicken = true
 font-thicken-strength = 10
 font-feature = +zero
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
 scrollback-limit = 100000000
 
