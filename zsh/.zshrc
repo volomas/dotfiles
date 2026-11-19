@@ -177,6 +177,7 @@ export TESTCONTAINERS_RYUK_DISABLED=false
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export TESTCONTAINERS_HOST_OVVERRIDE=$(colima ls -j | jq -r '.address')
 export DOCKER_HOST="unix://${HOME}/.config/colima/default/docker.sock"
+export DISABLE_TELEMETRY=1 
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
@@ -189,3 +190,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # machine-specific zsh config (per-laptop): see ~/.zshrc.local
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/volodymyrmasliy/.local/bin:$PATH"

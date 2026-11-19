@@ -8,7 +8,7 @@ theme = Kanagawa Wave
 # kitty: font_family JetBrainsMono Nerd Font Mono, bold = Extra Bold
 # Iosevka Term primary; JetBrains Nerd Font kept as fallback for Nerd icon glyphs
 font-family = ""
-font-family = Iosevka Nerd Font
+font-family = Iosevka Nerd Font Mono
 font-family = Iosevka Term
 font-family = JetBrainsMono Nerd Font Mono
 # named styles within the family (kitty bold_font = "... Extra Bold")
@@ -21,6 +21,9 @@ font-feature = -calt
 font-thicken = true
 font-thicken-strength = 10
 font-feature = +zero
+adjust-cell-height = -8%
+# Character variants (Cherry-picked)
+font-feature = cv01=2, cv02=10, cv03=3, cv10=3, cv53=2, cv57=2
 
 cursor-style = block
 cursor-style-blink = false
